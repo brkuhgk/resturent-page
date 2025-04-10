@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, UtensilsCrossed } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -25,9 +26,11 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-6 rounded-md">
-              View Our Menu
-              <ChevronRight className="ml-1 h-4 w-4" />
+            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-6 rounded-md" asChild>
+              <Link to="/menu">
+                View Our Menu
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Link>
             </Button>
             <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 px-6 py-6 rounded-md">
               Book a Table

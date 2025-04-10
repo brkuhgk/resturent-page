@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,8 +24,8 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <NavLink href="#home">Home</NavLink>
-          <NavLink href="#menu">Menu</NavLink>
+          <NavLink href="/" isActive={location.pathname === '/'}>Home</NavLink>
+          <NavLink href="/menu" isActive={location.pathname === '/menu'}>Menu</NavLink>
           <NavLink href="#special">Specials</NavLink>
           <NavLink href="#contact">Contact</NavLink>
           <Button className="bg-primary hover:bg-primary/90 text-white">Reservations</Button>
@@ -47,8 +48,8 @@ const Navbar = () => {
         )}
       >
         <div className="flex flex-col p-8 space-y-6">
-          <MobileNavLink href="#home" onClick={() => setIsMenuOpen(false)}>Home</MobileNavLink>
-          <MobileNavLink href="#menu" onClick={() => setIsMenuOpen(false)}>Menu</MobileNavLink>
+          <MobileNavLink href="/" onClick={() => setIsMenuOpen(false)} isActive={location.pathname === '/'}>Home</MobileNavLink>
+          <MobileNavLink href="/menu" onClick={() => setIsMenuOpen(false)} isActive={location.pathname === '/menu'}>Menu</MobileNavLink>
           <MobileNavLink href="#special" onClick={() => setIsMenuOpen(false)}>Specials</MobileNavLink>
           <MobileNavLink href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</MobileNavLink>
           <Button className="w-full bg-primary hover:bg-primary/90 text-white mt-4">Reservations</Button>
@@ -58,26 +59,70 @@ const Navbar = () => {
   );
 };
 
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+const NavLink = ({ href, children, isActive = false }: { href: string; children: React.ReactNode; isActive?: boolean }) => {
+  const isExternal = href.startsWith('#');
+  
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        className={cn(
+          "text-foreground/80 hover:text-primary transition-colors font-medium text-sm",
+          isActive && "text-primary font-semibold"
+        )}
+      >
+        {children}
+      </a>
+    );
+  }
+  
   return (
-    <a
-      href={href}
-      className="text-foreground/80 hover:text-primary transition-colors font-medium text-sm"
+    <Link
+      to={href}
+      className={cn(
+        "text-foreground/80 hover:text-primary transition-colors font-medium text-sm",
+        isActive && "text-primary font-semibold"
+      )}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 
-const MobileNavLink = ({ href, onClick, children }: { href: string; onClick?: () => void; children: React.ReactNode }) => {
+const MobileNavLink = ({ href, onClick, children, isActive = false }: { 
+  href: string; 
+  onClick?: () => void; 
+  children: React.ReactNode;
+  isActive?: boolean;
+}) => {
+  const isExternal = href.startsWith('#');
+  
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        onClick={onClick}
+        className={cn(
+          "text-foreground hover:text-primary transition-colors font-medium text-lg",
+          isActive && "text-primary font-semibold"
+        )}
+      >
+        {children}
+      </a>
+    );
+  }
+  
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       onClick={onClick}
-      className="text-foreground hover:text-primary transition-colors font-medium text-lg"
+      className={cn(
+        "text-foreground hover:text-primary transition-colors font-medium text-lg",
+        isActive && "text-primary font-semibold"
+      )}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 
