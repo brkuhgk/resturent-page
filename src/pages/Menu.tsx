@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { UtensilsCrossed, Leaf, AlertTriangle } from 'lucide-react';
+import { UtensilsCrossed, ChevronRight, Leaf, AlertTriangle, ImageIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 type MenuItem = {
@@ -38,7 +37,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1630383249896-460eaa774f84?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://images.unsplash.com/photo-1630383249896-315a1b40adfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmFkYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
           },
           { 
             name: 'Sambhar Vada', 
@@ -47,7 +46,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: ['mustard'],
-            imageUrl: 'https://images.unsplash.com/photo-1625398407796-82650a8c9dd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://images.unsplash.com/photo-1610057099451-d4f0fc6896a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FtYmhhciUyMHZhZGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
           },
           { 
             name: 'Curd Vada', 
@@ -56,7 +55,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: true,
             allergens: ['dairy', 'mustard'],
-            imageUrl: 'https://images.unsplash.com/photo-1589301773859-bb024d3ad558?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://images.unsplash.com/photo-1589516261368-9a15148b0f8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3VyZCUyMHZhZGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
           },
         ]
       },
@@ -70,7 +69,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1589301768775-e0c4c4f6f2b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aWRsaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
           },
           { 
             name: 'Sambhar Idli', 
@@ -79,7 +78,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: ['mustard'],
-            imageUrl: 'https://images.unsplash.com/photo-1626057953575-9a8fbe06f9b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aWRsaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
           },
         ]
       },
@@ -93,7 +92,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9zYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
           },
           { 
             name: 'Onion Dosa', 
@@ -102,7 +101,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1589301764097-b7ce9a984a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://images.unsplash.com/photo-1589301767763-ab02bcf4546e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZG9zYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
           },
           { 
             name: 'Ghee Dosa', 
@@ -111,7 +110,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: true,
             allergens: ['dairy'],
-            imageUrl: 'https://images.unsplash.com/photo-1610057224084-302b443526b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZG9zYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
           },
         ]
       }
@@ -127,7 +126,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: false,
             allergens: ['soya'],
-            imageUrl: 'https://images.unsplash.com/photo-1600326145402-a79a1dc27c28?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/cauliflower-chilli.jpg"
           },
           { 
             name: 'Gobi Manchurian', 
@@ -136,7 +135,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: false,
             allergens: ['soya'],
-            imageUrl: 'https://images.unsplash.com/photo-1625398407796-82650a8c9dd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/gobi-manchurian.jpg"
           },
         ]
       },
@@ -150,7 +149,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: false,
             allergens: ['soya', 'dairy'],
-            imageUrl: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/chicken-65.jpg"
           },
           { 
             name: 'Chilli Chicken', 
@@ -159,7 +158,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: false,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1600326145359-3a44909d1a39?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/chilli-chicken.jpg"
           },
         ]
       },
@@ -173,7 +172,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: false,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/steamed-rice.jpg"
           },
           { 
             name: 'Ghee Rice', 
@@ -182,7 +181,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: false,
             allergens: ['dairy'],
-            imageUrl: 'https://images.unsplash.com/photo-1596097635121-14b63b7a0c19?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/ghee-rice.jpg"
           },
         ]
       }
@@ -198,7 +197,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1630383249896-460eaa774f84?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/medhu-vada.jpg"
           },
           { 
             name: 'Aloo Bonda', 
@@ -207,7 +206,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: false,
             allergens: ['mustard'],
-            imageUrl: 'https://images.unsplash.com/photo-1601050690117-94f5f7a16c9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/aloo-bonda.jpg"
           },
         ]
       },
@@ -221,7 +220,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/plain-dosa.jpg"
           },
           { 
             name: 'Chapathi', 
@@ -230,7 +229,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: false,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/chapathi.jpg"
           },
         ]
       },
@@ -245,7 +244,7 @@ const Menu = () => {
             isGlutenFree: true,
             allergens: ['dairy', 'nuts'],
             isPopular: true,
-            imageUrl: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/butter-chicken.jpg"
           },
           { 
             name: 'Paneer Butter Masala', 
@@ -254,7 +253,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: true,
             allergens: ['dairy', 'nuts'],
-            imageUrl: 'https://images.unsplash.com/photo-1626200926749-ccce8b61832c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/paneer-butter-masala.jpg"
           },
         ]
       }
@@ -270,7 +269,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: false,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1625398407797-2640478a72ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/breakfast-deal.jpg"
           },
           { 
             name: "Chola's Deal", 
@@ -279,7 +278,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: false,
             allergens: ['dairy'],
-            imageUrl: 'https://images.unsplash.com/photo-1579027989536-b7b1f875659b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/cholas-deal.jpg"
           },
           { 
             name: "Chola's Special Deal", 
@@ -288,7 +287,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: false,
             allergens: ['dairy', 'nuts'],
-            imageUrl: 'https://images.unsplash.com/photo-1585937421513-70a008356136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/cholas-special-deal.jpg"
           },
         ]
       }
@@ -304,7 +303,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: false,
             allergens: ['soya'],
-            imageUrl: 'https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/baby-corn-manchurian.jpg"
           },
           { 
             name: 'Finger Fish', 
@@ -313,7 +312,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: false,
             allergens: ['fish'],
-            imageUrl: 'https://images.unsplash.com/photo-1613482184972-f9c1f357d02a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/finger-fish.jpg"
           },
           { 
             name: 'Chocolate Dosa', 
@@ -322,7 +321,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1640377516319-13ef56bae1fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/chocolate-dosa.jpg"
           },
         ]
       }
@@ -338,7 +337,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: false,
             allergens: ['dairy', 'nuts'],
-            imageUrl: 'https://images.unsplash.com/photo-1515467837939-6875e4df3b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/kesari.jpg"
           },
           { 
             name: 'Gulab Jamoon (2 pieces)', 
@@ -348,7 +347,7 @@ const Menu = () => {
             isGlutenFree: false,
             allergens: ['dairy'],
             isPopular: true,
-            imageUrl: 'https://images.unsplash.com/photo-1594149630198-2a98d83c359e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/gulab-jamoon.jpg"
           },
         ]
       },
@@ -362,7 +361,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: true,
             allergens: ['dairy'],
-            imageUrl: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/sweet-lassi.jpg"
           },
           { 
             name: 'Fresh Orange Juice', 
@@ -371,7 +370,7 @@ const Menu = () => {
             isVegetarian: true,
             isGlutenFree: true,
             allergens: [],
-            imageUrl: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+            imageUrl: "https://example.com/fresh-orange-juice.jpg"
           },
         ]
       }
@@ -401,34 +400,33 @@ const Menu = () => {
             <h2 className="text-2xl font-display font-semibold border-b pb-2">{section.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {section.items.map((item, itemIdx) => (
-                <Card key={`${activeCategory}-${idx}-${itemIdx}`} className="h-full overflow-hidden border-red-950/20">
-                  {item.imageUrl && (
-                    <div className="relative h-48 overflow-hidden">
+                <Card key={`${activeCategory}-${idx}-${itemIdx}`} className="h-full overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    {item.imageUrl ? (
                       <img 
                         src={item.imageUrl} 
                         alt={item.name} 
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       />
-                      {item.isPopular && (
-                        <Badge className="absolute top-2 right-2 bg-red-700 text-white">
-                          Popular
-                        </Badge>
-                      )}
-                    </div>
-                  )}
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-muted">
+                        <ImageIcon className="w-10 h-10 text-muted-foreground/40" />
+                      </div>
+                    )}
+                  </div>
                   <CardHeader className="pb-2">
                     <div className="flex justify-between items-start">
                       <CardTitle className="text-lg">
                         {item.name}
-                        {!item.imageUrl && item.isPopular && (
-                          <Badge className="ml-2 bg-red-700 text-white">Popular</Badge>
+                        {item.isPopular && (
+                          <Badge className="ml-2 bg-primary text-white">Popular</Badge>
                         )}
                       </CardTitle>
-                      <span className="font-medium text-lg text-red-700">{item.price}</span>
+                      <span className="font-medium text-lg text-primary">{item.price}</span>
                     </div>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <CardDescription className="mb-3 text-gray-700">{item.description}</CardDescription>
+                    <CardDescription className="mb-3">{item.description}</CardDescription>
                     <div className="flex items-center flex-wrap gap-2">
                       {item.isVegetarian && (
                         <Badge variant="outline" className="flex items-center gap-1 text-xs bg-green-50 text-green-700 border-green-200">
@@ -458,23 +456,23 @@ const Menu = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <UtensilsCrossed className="text-red-700 h-6 w-6" />
-              <h1 className="text-3xl md:text-4xl font-display font-bold text-gray-900">Our Menu</h1>
+              <UtensilsCrossed className="text-primary h-6 w-6" />
+              <h1 className="text-3xl md:text-4xl font-display font-bold">Our Menu</h1>
             </div>
-            <p className="text-gray-700 max-w-2xl mx-auto mt-2">
+            <p className="text-foreground/70 max-w-2xl mx-auto mt-2">
               Explore our authentic Indian cuisine with dishes from various regions, each prepared with fresh ingredients and traditional recipes.
             </p>
           </div>
 
           <div className="flex flex-col gap-8">
             <div className="overflow-x-auto pb-2">
-              <div className="flex h-auto p-1 w-full md:w-fit mx-auto bg-gray-200 rounded-md">
+              <div className="flex h-auto p-1 w-full md:w-fit mx-auto bg-muted rounded-md">
                 {menuCategories.map((category) => (
                   <button
                     key={category.id}
@@ -482,8 +480,8 @@ const Menu = () => {
                     className={cn(
                       "px-4 py-2 rounded-sm text-sm font-medium transition-colors",
                       activeCategory === category.id 
-                        ? "bg-red-700 text-white shadow-sm" 
-                        : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                        ? "bg-background text-foreground shadow-sm" 
+                        : "text-muted-foreground hover:text-foreground"
                     )}
                   >
                     {category.label}
