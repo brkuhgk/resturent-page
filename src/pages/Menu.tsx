@@ -356,6 +356,62 @@ const Menu = () => {
     { id: 'desserts', label: 'Desserts & Drinks' },
   ];
 
+  const handleTabChange = (value: string) => {
+    setActiveCategory(value);
+  };
+
+  const renderMenuSections = () => {
+    const sections = menuData[activeCategory as keyof typeof menuData];
+    
+    return (
+      <div className="space-y-10">
+        {sections.map((section, idx) => (
+          <div key={`${activeCategory}-${idx}`} className="space-y-4">
+            <h2 className="text-2xl font-display font-semibold border-b pb-2">{section.name}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {section.items.map((item, itemIdx) => (
+                <Card key={`${activeCategory}-${idx}-${itemIdx}`} className="h-full">
+                  <CardHeader className="pb-2">
+                    <div className="flex justify-between items-start">
+                      <CardTitle className="text-lg">
+                        {item.name}
+                        {item.isPopular && (
+                          <Badge className="ml-2 bg-primary text-white">Popular</Badge>
+                        )}
+                      </CardTitle>
+                      <span className="font-medium text-lg text-primary">{item.price}</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <CardDescription className="mb-3">{item.description}</CardDescription>
+                    <div className="flex items-center flex-wrap gap-2">
+                      {item.isVegetarian && (
+                        <Badge variant="outline" className="flex items-center gap-1 text-xs bg-green-50 text-green-700 border-green-200">
+                          <Leaf className="w-3 h-3" /> Veg
+                        </Badge>
+                      )}
+                      {item.isGlutenFree && (
+                        <Badge variant="outline" className="text-xs bg-blue-50 text-blue-700 border-blue-200">
+                          Gluten Free
+                        </Badge>
+                      )}
+                      {item.allergens && item.allergens.length > 0 && (
+                        <Badge variant="outline" className="flex items-center gap-1 text-xs bg-amber-50 text-amber-700 border-amber-200">
+                          <AlertTriangle className="w-3 h-3" /> 
+                          {item.allergens.join(', ')}
+                        </Badge>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -372,72 +428,26 @@ const Menu = () => {
           </div>
 
           <div className="flex flex-col gap-8">
-            <Tabs defaultValue="breakfast" className="w-full">
-              <div className="overflow-x-auto pb-2">
-                <TabsList className="flex h-auto p-1 w-full md:w-fit mx-auto">
-                  {menuCategories.map((category) => (
-                    <TabsTrigger 
-                      key={category.id} 
-                      value={category.id}
-                      onClick={() => setActiveCategory(category.id)}
-                      className="px-4 py-2 text-sm"
-                    >
-                      {category.label}
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
+            <div className="overflow-x-auto pb-2">
+              <div className="flex h-auto p-1 w-full md:w-fit mx-auto bg-muted rounded-md">
+                {menuCategories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => handleTabChange(category.id)}
+                    className={cn(
+                      "px-4 py-2 rounded-sm text-sm font-medium transition-colors",
+                      activeCategory === category.id 
+                        ? "bg-background text-foreground shadow-sm" 
+                        : "text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    {category.label}
+                  </button>
+                ))}
               </div>
+            </div>
 
-              {Object.entries(menuData).map(([category, sections]) => (
-                <TabsContent key={category} value={category} className="mt-6">
-                  <div className="space-y-10">
-                    {sections.map((section, idx) => (
-                      <div key={`${category}-${idx}`} className="space-y-4">
-                        <h2 className="text-2xl font-display font-semibold border-b pb-2">{section.name}</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {section.items.map((item, itemIdx) => (
-                            <Card key={`${category}-${idx}-${itemIdx}`} className="h-full">
-                              <CardHeader className="pb-2">
-                                <div className="flex justify-between items-start">
-                                  <CardTitle className="text-lg">
-                                    {item.name}
-                                    {item.isPopular && (
-                                      <Badge className="ml-2 bg-primary text-white">Popular</Badge>
-                                    )}
-                                  </CardTitle>
-                                  <span className="font-medium text-lg text-primary">{item.price}</span>
-                                </div>
-                              </CardHeader>
-                              <CardContent className="pt-0">
-                                <CardDescription className="mb-3">{item.description}</CardDescription>
-                                <div className="flex items-center flex-wrap gap-2">
-                                  {item.isVegetarian && (
-                                    <Badge variant="outline" className="flex items-center gap-1 text-xs bg-green-50 text-green-700 border-green-200">
-                                      <Leaf className="w-3 h-3" /> Veg
-                                    </Badge>
-                                  )}
-                                  {item.isGlutenFree && (
-                                    <Badge variant="outline" className="text-xs bg-blue-50 text-blue-700 border-blue-200">
-                                      Gluten Free
-                                    </Badge>
-                                  )}
-                                  {item.allergens && item.allergens.length > 0 && (
-                                    <Badge variant="outline" className="flex items-center gap-1 text-xs bg-amber-50 text-amber-700 border-amber-200">
-                                      <AlertTriangle className="w-3 h-3" /> 
-                                      {item.allergens.join(', ')}
-                                    </Badge>
-                                  )}
-                                </div>
-                              </CardContent>
-                            </Card>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </TabsContent>
-              ))}
-            </Tabs>
+            {renderMenuSections()}
 
             <div className="mt-8 p-4 bg-amber-50 rounded-lg border border-amber-200">
               <div className="flex items-start gap-2">
