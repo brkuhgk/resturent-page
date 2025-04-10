@@ -104,7 +104,7 @@ export const breadsAndRice: MenuItem[] = [
     price: "$3.99",
     category: "sides",
     isVegetarian: true,
-    imageUrl: "https://images.unsplash.com/photo-1610057224066-3ad4bbte3a66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmFhbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmFhbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
   },
   {
     id: "side2",
