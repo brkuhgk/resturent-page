@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
-import { UtensilsCrossed, ChevronRight, Leaf, AlertTriangle, ImageIcon } from 'lucide-react';
+import { UtensilsCrossed, ChevronRight, Leaf, AlertTriangle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 type MenuItem = {
@@ -14,7 +15,6 @@ type MenuItem = {
   isGlutenFree?: boolean;
   allergens?: string[];
   isPopular?: boolean;
-  imageUrl?: string;
 };
 
 type MenuCategory = {
@@ -36,8 +36,7 @@ const Menu = () => {
             price: '£3.50',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: [],
-            imageUrl: "https://images.unsplash.com/photo-1630383249896-315a1b40adfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmFkYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            allergens: []
           },
           { 
             name: 'Sambhar Vada', 
@@ -45,8 +44,7 @@ const Menu = () => {
             price: '£4.50',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: ['mustard'],
-            imageUrl: "https://images.unsplash.com/photo-1610057099451-d4f0fc6896a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FtYmhhciUyMHZhZGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            allergens: ['mustard']
           },
           { 
             name: 'Curd Vada', 
@@ -54,8 +52,7 @@ const Menu = () => {
             price: '£4.50',
             isVegetarian: false,
             isGlutenFree: true,
-            allergens: ['dairy', 'mustard'],
-            imageUrl: "https://images.unsplash.com/photo-1589516261368-9a15148b0f8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3VyZCUyMHZhZGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            allergens: ['dairy', 'mustard']
           },
         ]
       },
@@ -68,8 +65,7 @@ const Menu = () => {
             price: '£3.50',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: [],
-            imageUrl: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aWRsaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            allergens: []
           },
           { 
             name: 'Sambhar Idli', 
@@ -77,8 +73,7 @@ const Menu = () => {
             price: '£4.50',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: ['mustard'],
-            imageUrl: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aWRsaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            allergens: ['mustard']
           },
         ]
       },
@@ -91,8 +86,7 @@ const Menu = () => {
             price: '£7.25',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: [],
-            imageUrl: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9zYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            allergens: []
           },
           { 
             name: 'Onion Dosa', 
@@ -100,8 +94,7 @@ const Menu = () => {
             price: '£7.75',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: [],
-            imageUrl: "https://images.unsplash.com/photo-1589301767763-ab02bcf4546e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZG9zYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            allergens: []
           },
           { 
             name: 'Ghee Dosa', 
@@ -109,8 +102,7 @@ const Menu = () => {
             price: '£7.75',
             isVegetarian: false,
             isGlutenFree: true,
-            allergens: ['dairy'],
-            imageUrl: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZG9zYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            allergens: ['dairy']
           },
         ]
       }
@@ -125,8 +117,7 @@ const Menu = () => {
             price: '£4.50',
             isVegetarian: true,
             isGlutenFree: false,
-            allergens: ['soya'],
-            imageUrl: "https://example.com/cauliflower-chilli.jpg"
+            allergens: ['soya']
           },
           { 
             name: 'Gobi Manchurian', 
@@ -134,8 +125,7 @@ const Menu = () => {
             price: '£5.50',
             isVegetarian: true,
             isGlutenFree: false,
-            allergens: ['soya'],
-            imageUrl: "https://example.com/gobi-manchurian.jpg"
+            allergens: ['soya']
           },
         ]
       },
@@ -148,8 +138,7 @@ const Menu = () => {
             price: '£4.99',
             isVegetarian: false,
             isGlutenFree: false,
-            allergens: ['soya', 'dairy'],
-            imageUrl: "https://example.com/chicken-65.jpg"
+            allergens: ['soya', 'dairy']
           },
           { 
             name: 'Chilli Chicken', 
@@ -157,8 +146,7 @@ const Menu = () => {
             price: '£5.75',
             isVegetarian: false,
             isGlutenFree: false,
-            allergens: [],
-            imageUrl: "https://example.com/chilli-chicken.jpg"
+            allergens: []
           },
         ]
       },
@@ -171,8 +159,7 @@ const Menu = () => {
             price: '£2.99',
             isVegetarian: true,
             isGlutenFree: false,
-            allergens: [],
-            imageUrl: "https://example.com/steamed-rice.jpg"
+            allergens: []
           },
           { 
             name: 'Ghee Rice', 
@@ -180,8 +167,7 @@ const Menu = () => {
             price: '£3.25',
             isVegetarian: false,
             isGlutenFree: false,
-            allergens: ['dairy'],
-            imageUrl: "https://example.com/ghee-rice.jpg"
+            allergens: ['dairy']
           },
         ]
       }
@@ -196,8 +182,7 @@ const Menu = () => {
             price: '£3.50',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: [],
-            imageUrl: "https://example.com/medhu-vada.jpg"
+            allergens: []
           },
           { 
             name: 'Aloo Bonda', 
@@ -205,8 +190,7 @@ const Menu = () => {
             price: '£3.50',
             isVegetarian: true,
             isGlutenFree: false,
-            allergens: ['mustard'],
-            imageUrl: "https://example.com/aloo-bonda.jpg"
+            allergens: ['mustard']
           },
         ]
       },
@@ -219,8 +203,7 @@ const Menu = () => {
             price: '£7.25',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: [],
-            imageUrl: "https://example.com/plain-dosa.jpg"
+            allergens: []
           },
           { 
             name: 'Chapathi', 
@@ -228,8 +211,7 @@ const Menu = () => {
             price: '£3.50',
             isVegetarian: true,
             isGlutenFree: false,
-            allergens: [],
-            imageUrl: "https://example.com/chapathi.jpg"
+            allergens: []
           },
         ]
       },
@@ -243,8 +225,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: true,
             allergens: ['dairy', 'nuts'],
-            isPopular: true,
-            imageUrl: "https://example.com/butter-chicken.jpg"
+            isPopular: true
           },
           { 
             name: 'Paneer Butter Masala', 
@@ -252,8 +233,7 @@ const Menu = () => {
             price: '£8.99',
             isVegetarian: false,
             isGlutenFree: true,
-            allergens: ['dairy', 'nuts'],
-            imageUrl: "https://example.com/paneer-butter-masala.jpg"
+            allergens: ['dairy', 'nuts']
           },
         ]
       }
@@ -268,8 +248,7 @@ const Menu = () => {
             price: '£11.95',
             isVegetarian: false,
             isGlutenFree: false,
-            allergens: [],
-            imageUrl: "https://example.com/breakfast-deal.jpg"
+            allergens: []
           },
           { 
             name: "Chola's Deal", 
@@ -277,8 +256,7 @@ const Menu = () => {
             price: '£19.75',
             isVegetarian: false,
             isGlutenFree: false,
-            allergens: ['dairy'],
-            imageUrl: "https://example.com/cholas-deal.jpg"
+            allergens: ['dairy']
           },
           { 
             name: "Chola's Special Deal", 
@@ -286,8 +264,7 @@ const Menu = () => {
             price: '£23.99',
             isVegetarian: false,
             isGlutenFree: false,
-            allergens: ['dairy', 'nuts'],
-            imageUrl: "https://example.com/cholas-special-deal.jpg"
+            allergens: ['dairy', 'nuts']
           },
         ]
       }
@@ -302,8 +279,7 @@ const Menu = () => {
             price: '£3.75',
             isVegetarian: true,
             isGlutenFree: false,
-            allergens: ['soya'],
-            imageUrl: "https://example.com/baby-corn-manchurian.jpg"
+            allergens: ['soya']
           },
           { 
             name: 'Finger Fish', 
@@ -311,8 +287,7 @@ const Menu = () => {
             price: '£5.25',
             isVegetarian: false,
             isGlutenFree: false,
-            allergens: ['fish'],
-            imageUrl: "https://example.com/finger-fish.jpg"
+            allergens: ['fish']
           },
           { 
             name: 'Chocolate Dosa', 
@@ -320,8 +295,7 @@ const Menu = () => {
             price: '£5.25',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: [],
-            imageUrl: "https://example.com/chocolate-dosa.jpg"
+            allergens: []
           },
         ]
       }
@@ -336,8 +310,7 @@ const Menu = () => {
             price: '£0.99',
             isVegetarian: false,
             isGlutenFree: false,
-            allergens: ['dairy', 'nuts'],
-            imageUrl: "https://example.com/kesari.jpg"
+            allergens: ['dairy', 'nuts']
           },
           { 
             name: 'Gulab Jamoon (2 pieces)', 
@@ -346,8 +319,7 @@ const Menu = () => {
             isVegetarian: false,
             isGlutenFree: false,
             allergens: ['dairy'],
-            isPopular: true,
-            imageUrl: "https://example.com/gulab-jamoon.jpg"
+            isPopular: true
           },
         ]
       },
@@ -360,8 +332,7 @@ const Menu = () => {
             price: '£3.25',
             isVegetarian: false,
             isGlutenFree: true,
-            allergens: ['dairy'],
-            imageUrl: "https://example.com/sweet-lassi.jpg"
+            allergens: ['dairy']
           },
           { 
             name: 'Fresh Orange Juice', 
@@ -369,8 +340,7 @@ const Menu = () => {
             price: '£3.50',
             isVegetarian: true,
             isGlutenFree: true,
-            allergens: [],
-            imageUrl: "https://example.com/fresh-orange-juice.jpg"
+            allergens: []
           },
         ]
       }
@@ -400,20 +370,7 @@ const Menu = () => {
             <h2 className="text-2xl font-display font-semibold border-b pb-2">{section.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {section.items.map((item, itemIdx) => (
-                <Card key={`${activeCategory}-${idx}-${itemIdx}`} className="h-full overflow-hidden">
-                  <div className="h-48 overflow-hidden">
-                    {item.imageUrl ? (
-                      <img 
-                        src={item.imageUrl} 
-                        alt={item.name} 
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-muted">
-                        <ImageIcon className="w-10 h-10 text-muted-foreground/40" />
-                      </div>
-                    )}
-                  </div>
+                <Card key={`${activeCategory}-${idx}-${itemIdx}`} className="h-full">
                   <CardHeader className="pb-2">
                     <div className="flex justify-between items-start">
                       <CardTitle className="text-lg">
