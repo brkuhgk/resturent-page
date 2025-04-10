@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,44 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				spice: {
+					100: '#FFF3E0',
+					200: '#FFE0B2',
+					300: '#FFCC80',
+					400: '#FFB74D',
+					500: '#FFA726',
+					600: '#FB8C00',
+					700: '#F57C00',
+					800: '#EF6C00',
+					900: '#E65100',
+				},
+				curry: {
+					100: '#FFF8E1',
+					200: '#FFECB3',
+					300: '#FFE082',
+					400: '#FFD54F',
+					500: '#FFCA28',
+					600: '#FFC107',
+					700: '#FFB300',
+					800: '#FFA000',
+					900: '#FF8F00',
+				},
+				tandoor: {
+					100: '#FFEBEE',
+					200: '#FFCDD2',
+					300: '#EF9A9A',
+					400: '#E57373',
+					500: '#EF5350',
+					600: '#F44336',
+					700: '#E53935',
+					800: '#D32F2F',
+					900: '#C62828',
 				}
+			},
+			fontFamily: {
+				'display': ['Playfair Display', 'serif'],
+				'sans': ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +122,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'spice-spin': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'spice-spin': 'spice-spin 8s linear infinite'
 			}
 		}
 	},
