@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -261,7 +260,7 @@ const Menu = () => {
           },
           { 
             name: "Chola's Special Deal", 
-            description: 'Choice of Chicken, Veg, Lamb, or Fish curry, Chef's choice of Chicken or Veg Roll, Choice of Rice, Choice of Bread, and Chef's choice of Dessert',
+            description: "Choice of Chicken, Veg, Lamb, or Fish curry, Chef's choice of Chicken or Veg Roll, Choice of Rice, Choice of Bread, and Chef's choice of Dessert",
             price: '£23.99',
             isVegetarian: false,
             isGlutenFree: false,
