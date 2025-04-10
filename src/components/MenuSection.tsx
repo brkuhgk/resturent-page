@@ -2,7 +2,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
-import { CookingPot, Flame, ImageIcon } from 'lucide-react';
+import { CookingPot, Flame } from 'lucide-react';
 
 export type MenuItem = {
   id: string;
@@ -24,24 +24,20 @@ interface MenuItemCardProps {
 export const MenuItemCard = ({ item, className }: MenuItemCardProps) => {
   return (
     <div className={cn("menu-card", className)}>
-      <div className="relative h-48 overflow-hidden">
-        {item.imageUrl ? (
+      {item.imageUrl && (
+        <div className="relative">
           <img 
             src={item.imageUrl} 
             alt={item.name} 
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            className="menu-card-image"
           />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-muted">
-            <ImageIcon className="w-10 h-10 text-muted-foreground/40" />
-          </div>
-        )}
-        {item.isPopular && (
-          <Badge className="absolute top-2 right-2 bg-primary text-white">
-            Popular
-          </Badge>
-        )}
-      </div>
+          {item.isPopular && (
+            <Badge className="absolute top-2 right-2 bg-primary text-white">
+              Popular
+            </Badge>
+          )}
+        </div>
+      )}
       <div className="menu-card-content">
         <div className="flex justify-between items-start">
           <h3 className="text-lg font-semibold">{item.name}</h3>
