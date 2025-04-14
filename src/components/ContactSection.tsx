@@ -27,8 +27,11 @@ const ContactSection = () => {
                     <h3 className="font-medium">Location</h3>
                   </div>
                   <p className="text-foreground/70">
-                    123 Spice Avenue<br />
-                    Flavortown, CA 90210
+                  138-140 duke street EH6 8HR <br />
+                  EDINBURGH
+                     
+
+
                   </p>
                 </CardContent>
               </Card>
@@ -42,8 +45,8 @@ const ContactSection = () => {
                     <h3 className="font-medium">Contact</h3>
                   </div>
                   <p className="text-foreground/70">
-                    (555) 123-4567<br />
-                    info@spicehaven.com
+                    (131) 555-3007<br />
+                    info@cholahighlands.com
                   </p>
                 </CardContent>
               </Card>
@@ -60,24 +63,24 @@ const ContactSection = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <p className="font-medium">Monday - Friday</p>
-                    <p className="text-foreground/70">11:30 AM - 10:00 PM</p>
+                    <p className="text-foreground/70">11:00 AM - 10:00 PM</p>
                   </div>
                   <div>
                     <p className="font-medium">Saturday - Sunday</p>
-                    <p className="text-foreground/70">12:00 PM - 11:00 PM</p>
+                    <p className="text-foreground/70">11:00 PM - 10:00 PM</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6">
+            {/* <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6">
               Make a Reservation
-            </Button>
+            </Button> */}
           </div>
 
           <div className="rounded-xl overflow-hidden h-[400px] lg:h-full">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059353029!2d-74.25986548248684!3d40.69714941512199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sca!4v1680449690911!5m2!1sen!2sca" 
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=138-140%20Duke%20Street,%20EH6%208hR,%20Edinburgh%20+(Cholahighlands)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
