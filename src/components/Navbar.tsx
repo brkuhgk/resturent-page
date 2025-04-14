@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <Link to="/" className="flex items-center gap-2">
             <img src="src/assets/chola_highlands_logo_Svg.svg" alt="Logo" className="h-10 w-10" />
-            <span className="font-display font-bold text-2xl text-red-600">Chola Highlander</span>
+            <span className="font-display font-bold text-2xl text-red-600">Chola Highland</span>
           </Link>
           <div className="flex items-center gap-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
