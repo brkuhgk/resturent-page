@@ -3,6 +3,7 @@ import { Menu, X, Facebook, Instagram, Twitter } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from '@/assets/logo.svg';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +20,7 @@ const Navbar = () => {
         {/* Left Section: Logo, Name, and Social Media Links */}
         <div className="flex items-center gap-4">
           <Link to="/" className="flex items-center gap-2">
-            {/* <img src="src/assets/chola_highlands_logo_Svg.svg" alt="Logo" className="h-10 w-10" /> */}
-            <img src="chola_highlands_logo_Svg.svg" alt="Logo" className="h-10 w-10" />
+            <img src={Logo} alt="Logo" className="h-10 w-10" />
 
             <span className="font-display font-bold text-2xl text-red-600">Chola Highlands</span>
           </Link>
