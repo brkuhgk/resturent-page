@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-1">
-            <h3 className="font-display text-2xl font-bold text-primary mb-4">Chola Highlander</h3>
+            <h3 className="font-display text-2xl font-bold text-primary mb-4">Chola Highlands</h3>
             <p className="text-foreground/70 mb-4">
               Authentic Indian cuisine prepared with traditional recipes and the finest ingredients.
             </p>
@@ -46,7 +46,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground/70 text-sm">
-            &copy; {currentYear} Chola Highlander. All rights reserved.
+            &copy; {currentYear} Chola Highlands. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,0 +1,8 @@
+## TO Restore GOdaddy Domain to its site
+
+### DNS Record
+
+1. cname	www	cholahighlands.com.	1 Hour
+
+2. cname	_domainconnect	_domainconnect.gd.domaincontrol.com.	1 Hour
+

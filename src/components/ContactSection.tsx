@@ -29,8 +29,6 @@ const ContactSection = () => {
                   <p className="text-foreground/70">
                   138-140 duke street EH6 8HR <br />
                   EDINBURGH
-                     
-
 
                   </p>
                 </CardContent>
@@ -62,12 +60,12 @@ const ContactSection = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="font-medium">Monday - Friday</p>
-                    <p className="text-foreground/70">11:00 AM - 10:00 PM</p>
+                    <p className="font-medium">Monday - Saturday</p>
+                    <p className="text-foreground/70">5:00 PM - 11:00 PM</p>
                   </div>
                   <div>
-                    <p className="font-medium">Saturday - Sunday</p>
-                    <p className="text-foreground/70">11:00 PM - 10:00 PM</p>
+                    <p className="font-medium">Sunday</p>
+                    <p className="text-foreground/70">12:30 PM - 2:30 PM && 6:30 PM - 11:00 PM</p>
                   </div>
                 </div>
               </CardContent>

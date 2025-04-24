@@ -15,10 +15,11 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <BreakfastBuffetOffer />
+        {/* <BreakfastBuffetOffer /> */}
 
         {/* <SpecialsSection /> */}
         <ContactSection />
+        
       </main>
       <Footer />
     </div>

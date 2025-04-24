@@ -1,9 +1,9 @@
-Category,Item Name,Gluten Free,Vegan,Allergens,Spicy Level,Popular,Description,Price,Price2,Image URL,Subcategory
-Vadai,Medhu Vadai  (2pc),,yes,,4,yes,Deep-fried lentil doughnuts ,£3.00,,,
-Vadai,Sambhar Vadai (2pc),,yes,,,,Deep-fried lentil doughnuts (medu vadai) soaked in a flavorful and tangy lentil-based vegetable stew called sambhar.,£4.00,,,
-Vadai,Curd Vadai (2pc),,,,,,Deep-fried lentil doughnuts (medu vadai) soaked in a Yogurt.,£4.00,,,
-Vadai,Masal Vadai (2pc),yes,yes,,,,"crispy, deep-fried South Indian snack made from lentil and a blend of spices",£3.75,,,
-Snacks,Aloo Bonda,,,,,,"Golden-brown raw Potato fritters, deep-fried in a flavorful gram flour.",£3.00,,,
+Category,Item Name,Gluten Free,Vegan,Allergens,Spicy Level,Popular,Description,Price,Price2,Subcategory,Image URL
+Vadai,Medhu Vadai  (2pc),,yes,,4,yes,Deep-fried lentil doughnuts ,£3.00,,,https://lh3.googleusercontent.com/pw/AP1GczOrxlM7eJz-4r5KxhcmADoag9S8u5cmlYyd9NTB7o6CCQQGjW6IkRaaIP_CQMBe5_20NhoxUqVadkWpQar2XrB77oKw6mN1W82axuDxLXE-dYrRLjZE2q24c18ckLyIr8Cl7XZirrSz2Sj7aq5r8pQ=w225-h144-s-no-gm?authuser=0
+Vadai,Sambhar Vadai (2pc),,yes,,,,Deep-fried lentil doughnuts (medu vadai) soaked in a flavorful and tangy lentil-based vegetable stew called sambhar.,£4.00,,,https://lh3.googleusercontent.com/pw/AP1GczOrxlM7eJz-4r5KxhcmADoag9S8u5cmlYyd9NTB7o6CCQQGjW6IkRaaIP_CQMBe5_20NhoxUqVadkWpQar2XrB77oKw6mN1W82axuDxLXE-dYrRLjZE2q24c18ckLyIr8Cl7XZirrSz2Sj7aq5r8pQ=w225-h144-s-no-gm?authuser=0
+Vadai,Curd Vadai (2pc),,,,,,Deep-fried lentil doughnuts (medu vadai) soaked in a Yogurt.,£4.00,,,https://lh3.googleusercontent.com/pw/AP1GczP6IRMa4YTPElc2x7La4LHrg0tlIjDA7GKypmJprMRxjPRfSLA99ojvZ0f41zR_W2IIOvKAtSM_62T2pCpdUbQdzxFuWKHnUrnIpA-C-f6zz7OKkpwzS5JFWuyHL-eE8O8f4hi9x6bfMYcZZt2CS1I=w891-h891-s-no-gm?authuser=0
+Vadai,Masal Vadai (2pc),yes,yes,,,,"crispy, deep-fried South Indian snack made from lentil and a blend of spices",£3.75,,,https://lh3.googleusercontent.com/pw/AP1GczP6IRMa4YTPElc2x7La4LHrg0tlIjDA7GKypmJprMRxjPRfSLA99ojvZ0f41zR_W2IIOvKAtSM_62T2pCpdUbQdzxFuWKHnUrnIpA-C-f6zz7OKkpwzS5JFWuyHL-eE8O8f4hi9x6bfMYcZZt2CS1I=w891-h891-s-no-gm?authuser=0
+Snacks,Aloo Bonda,,,,,,"Golden-brown raw Potato fritters, deep-fried in a flavorful gram flour.",£3.00,,,https://lh3.googleusercontent.com/pw/AP1GczP6IRMa4YTPElc2x7La4LHrg0tlIjDA7GKypmJprMRxjPRfSLA99ojvZ0f41zR_W2IIOvKAtSM_62T2pCpdUbQdzxFuWKHnUrnIpA-C-f6zz7OKkpwzS5JFWuyHL-eE8O8f4hi9x6bfMYcZZt2CS1I=w891-h891-s-no-gm?authuser=0
 Snacks,Paniyaram (7 pc),,,,,,Golden-brown dumplings made from fermented rice and Lentils,£3.25,,,
 Snacks,Punugulu (7 pc),,,,,,"Crispy, deep-fried South Indian snack made from idli or dosa batter",£3.25,,,
 Snacks,Vazhakai Baji,,,,,,"Golden-brown raw banana fritters, deep-fried in a flavorful gram flour.",£4.25,,,
@@ -132,3 +132,6 @@ Soft Drinks,Sparkling water 330 ml,,,,,,"Crisp Sparkling Water (330 ml), refresh
 Soft Drinks,Spring water 330 ml,,,,,,"Pure Spring Water (330 ml), fresh and clean, a refreshing and hydrating choice for any meal.",2.5,,,
 Soft Drinks,Irn bru (330ml),,,,,,"Fizzy Irn-Bru (330 ml), Scotland’s iconic bold and tangy drink, perfect for a refreshing kick.",1.5,,,
 Soft Drinks,Diet Irn bru (330ml),,,,,,"Zesty Diet Irn-Bru (330 ml), sugar-free with Scotland’s bold, tangy flavor, a refreshing drink companion.",1.5,,,
+Deals,Chettinad Chicken + Parota (2pc) + Kesari,,,,,yes,"Chettinad Chicken with 2 Parotas and Kesari dessert combo. Spicy, authentic South Indian flavors at a great deal!",£12.95,,,
+Deals,Madras lamb + Ghee rice + Kesari,,,,,yes,"Madras Lamb with Ghee Rice and Kesari dessert combo. Rich, aromatic South Indian dish with a sweet finish, perfect deal!
+",£12.95,,,

@@ -36,7 +36,7 @@ const DECORATIVE_DIVIDER = `url("data:image/svg+xml,%3Csvg width='144' height='1
 
 // Default images for categories
 const defaultImageUrls: { [key: string]: string } = {
-  "APPETIZERS": "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2Ftb3NhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  "APPETIZERS": "https://lh3.googleusercontent.com/pw/AP1GczOrxlM7eJz-4r5KxhcmADoag9S8u5cmlYyd9NTB7o6CCQQGjW6IkRaaIP_CQMBe5_20NhoxUqVadkWpQar2XrB77oKw6mN1W82axuDxLXE-dYrRLjZE2q24c18ckLyIr8Cl7XZirrSz2Sj7aq5r8pQ=w225-h144-s-no-gm?authuser=0",
   "TANDOOR": "https://images.unsplash.com/photo-1610057224084-302b443526b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGFuZG9vcmklMjBjaGlja2VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   "VEGETARIAN": "https://images.unsplash.com/photo-1626200926749-ccce8b61832c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGFuZWVyJTIwdGlra2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
   "CHICKEN": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMGN1cnJ5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
@@ -46,7 +46,8 @@ const defaultImageUrls: { [key: string]: string } = {
   "BREAD": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmFhbnxlbnwwfHwwfHw%3D%3D&auto=format&fit=crop&w=500&q=60",
   "DESSERTS": "https://images.unsplash.com/photo-1594149630198-2a98d83c359e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3VsYWIlMjBqYW11bnxlbnwwfHwwfHw%3D%3D&auto=format&fit=crop&w=500&q=60",
   "DRINKS": "https://images.unsplash.com/photo-1541658016709-82535e94bc69?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFzc2l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-  "THALI": "https://images.unsplash.com/photo-1626057952510-5919e8d372f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGhhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+  "THALI": "https://images.unsplash.com/photo-1626057952510-5919e8d372f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGhhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+  "BLANK" : "https://lh3.googleusercontent.com/pw/AP1GczOrxlM7eJz-4r5KxhcmADoag9S8u5cmlYyd9NTB7o6CCQQGjW6IkRaaIP_CQMBe5_20NhoxUqVadkWpQar2XrB77oKw6mN1W82axuDxLXE-dYrRLjZE2q24c18ckLyIr8Cl7XZirrSz2Sj7aq5r8pQ=w225-h144-s-no-gm?authuser=0"
 };
 
 const Menu = () => {
@@ -138,6 +139,7 @@ const Menu = () => {
               const allergens = row['Allergens'] ? 
                 row['Allergens'].toString().split(',').map((a: string) => a.trim()).filter(Boolean) : 
                 [];
+                
                 
               // Parse spicy level
               const spicyLevel = typeof row['Spicy Level'] === 'number' ? 

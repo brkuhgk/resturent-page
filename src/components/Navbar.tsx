@@ -13,20 +13,23 @@ const Navbar = () => {
   };
 
   return (
+    
     <nav className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
         {/* Left Section: Logo, Name, and Social Media Links */}
         <div className="flex items-center gap-4">
           <Link to="/" className="flex items-center gap-2">
-            <img src="src/assets/chola_highlands_logo_Svg.svg" alt="Logo" className="h-10 w-10" />
-            <span className="font-display font-bold text-2xl text-red-600">Chola Highland</span>
+            {/* <img src="src/assets/chola_highlands_logo_Svg.svg" alt="Logo" className="h-10 w-10" /> */}
+            <img src="chola_highlands_logo_Svg.svg" alt="Logo" className="h-10 w-10" />
+
+            <span className="font-display font-bold text-2xl text-red-600">Chola Highlands</span>
           </Link>
           <div className="flex items-center gap-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
                className="text-gray-400 hover:text-red-500 transition-colors">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.instagram.com/Chola_Highlands/#" target="_blank" rel="noopener noreferrer"
                className="text-gray-400 hover:text-red-500 transition-colors">
               <Instagram className="h-5 w-5" />
             </a>
@@ -44,7 +47,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <NavLink href="/" isActive={location.pathname === '/'}>Home</NavLink>
           <NavLink href="#contact">Contact</NavLink>
-          <Button className="bg-red-700 hover:bg-red-800 text-white">Order Takeout</Button>
+         
+          <Button onClick={() => alert('Please call us at +44 (131) 555-3007 to place your order!')} className="bg-red-700 hover:bg-red-800 text-white">Order By Phone</Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -73,7 +77,7 @@ const Navbar = () => {
                className="text-gray-400 hover:text-red-500 transition-colors">
               <Facebook className="h-6 w-6" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.instagram.com/Chola_Highlands/#" target="_blank" rel="noopener noreferrer"
                className="text-gray-400 hover:text-red-500 transition-colors">
               <Instagram className="h-6 w-6" />
             </a>
@@ -83,7 +87,7 @@ const Navbar = () => {
             </a>
           </div>
           
-          <Button className="w-full bg-red-700 hover:bg-red-800 text-white mt-4">Order Takeout</Button>
+          <Button onClick={() => alert('Please call us at +44 (131) 555-3007 to place your order!')} className="w-full bg-red-700 hover:bg-red-800 text-white mt-4">Order By Phone</Button>
         </div>
       </div>
     </nav>
