@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: '/resturent-page/', // Add this line with your repo name
+  base: '/', // Changed to '/' for custom domain
   plugins: [
     react(),
     mode === 'development' &&
