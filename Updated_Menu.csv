@@ -1,14 +1,14 @@
 Category,Item Name,Gluten Free,Vegan,Allergens,Spicy Level,Popular,Description,Price,Price2,Subcategory,Image URL
-Vadai,Medhu Vadai  (2pc),,yes,,2,yes,Deep-fried lentil doughnuts ,£3.00,,,
-Vadai,Sambhar Vadai (2pc),,yes,,2,yes,Deep-fried lentil doughnuts (medu vadai) soaked in a flavorful and tangy lentil-based vegetable stew called sambhar.,£4.00,,,
-Vadai,Curd Vadai (2pc),,,,0,,Deep-fried lentil doughnuts (medu vadai) soaked in a Yogurt.,£4.00,,,
-Vadai,Masal Vadai (2pc),yes,yes,,2,,"crispy, deep-fried South Indian snack made from lentil and a blend of spices",£3.75,,,
-Snacks,Aloo Bonda,,Yes,,2,,"Golden-brown raw Potato fritters, deep-fried in a flavorful gram flour.",£3.00,,,
+Vadai,Medhu Vadai  (2pc),,yes,,2,yes,Deep-fried lentil doughnuts ,£4.25,,,
+Vadai,Sambhar Vadai (2pc),,yes,,2,yes,Deep-fried lentil doughnuts (medu vadai) soaked in a flavorful and tangy lentil-based vegetable stew called sambhar.,£5.25,,,
+Vadai,Curd Vadai (2pc),,,,0,,Deep-fried lentil doughnuts (medu vadai) soaked in a Yogurt.,£4.99,,,
+Vadai,Masal Vadai (2pc),yes,yes,,2,,"crispy, deep-fried South Indian snack made from lentil and a blend of spices",£4.25,,,
+Snacks,Aloo Bonda,,Yes,,2,,"Golden-brown raw Potato fritters, deep-fried in a flavorful gram flour.",£5.25,,,
 Snacks,Paniyaram (7 pc),Yes,Yes,,1,,Golden-brown dumplings made from fermented rice and Lentils,£3.25,,,
 Snacks,Punugulu (7 pc),,Yes,,1,yes,"Crispy, deep-fried South Indian snack made from idli or dosa batter",£3.25,,,
 Snacks,Vazhakai Baji,,Yes,,1,,"Golden-brown raw banana fritters, deep-fried in a flavorful gram flour.",£4.25,,,
 Snacks,Onion / potato Baji,,Yes,,2,yes,"Golden-brown onion, deep-fried in a flavorful gram flour batter with spices.",£3.50,,,
-Idly (2pc),Plain Idli,Yes,Yes,,0,,"Soft, fluffy, and steamed rice cake made from a fermented batter of rice and lentil",£3.00,,,
+Idly (2pc),Plain Idli,Yes,Yes,,0,,"Soft, fluffy, and steamed rice cake made from a fermented batter of rice and lentil",£3.00,,,https://lh3.googleusercontent.com/pw/AP1GczNGryQvJmU4AMnX-tcvxexr_5LozBZbEeqe5dpjU7AMA1-QXxPRHwwlN2g8O96eDWXPDnIO7ZmdZjs_BjdCZgtlTnSuJA6PajnRH5YBcDTUp3-6wEryxQe9Q7nh9USMwVlilsIF5hAsdEvojSeOcwfj=w612-h447-s-no-gm?authuser=0
 Idly (2pc),Poodi Idli,Yes,,,2,,"Soft, steamed idlis tossed in a spicy, aromatic blend of roasted lentils",£4.00,,,
 Idly (2pc),Sambhar Idli,,Yes,,2,yes,"The idlis are placed in a bowl or plate and generously soaked with hot sambhar, allowing them to absorb the flavors.",£4.00,,,
 Dosa,Plain Dosa,Yes,Yes,,0,yes,It is essentially a fermented crepe made from a batter of rice and lentil,£6.50,,,
@@ -71,7 +71,7 @@ Non-Veg curries,Chicken Bhuna,Yes,,,3,,"Tender chicken pieces cooked in a rich, 
 Non-Veg curries,Lamb Bhuna,Yes,,,3,,"Tender lamb pieces cooked in a rich, thick, and intensely spiced bhuna sauce",£9.99,£15.99,,
 Non-Veg curries,Chicken Vindaloo,Yes,,,5,Yes,"A fiery Goan classic with bold, tangy heat. Succulent chicken simmered in a spicy vinegar-based sauce",£9.99,,,
 Non-Veg curries,Lamb Vindaloo,Yes,,,5,,"A fiery Goan classic with bold, tangy heat. Succulent lamb simmered in a spicy vinegar-based sauce",£10.99,,,
-Biriyani,Chicken Biriyani,Yes,,,2,yes,"Fragrant and flavorful rice dish made with long-grain basmati rice, tender meat (chicken, mutton, fish, or prawns), or vegetables, cooked with aromatic spices",£6.99 (opening offer only ),,,
+Biriyani,Chicken Biriyani,Yes,,,2,yes,"Fragrant and flavorful rice dish made with long-grain basmati rice, tender meat (chicken, mutton, fish, or prawns), or vegetables, cooked with aromatic spices",£6.99 (opening offer only ),,,https://lh3.googleusercontent.com/pw/AP1GczPDAKAjOfAb573lQpIZzoPRYf1v1RRRJPiu7zUU21DcWxs90yaRiTz_YxVXFZw3T4nkDSHmw1IS6TrZXRzeiI3TPWKvkJY2ga71v_H09EAKxzTEhgz0kaM2by7pgUoov2GY2E7i_7dYbRsaM2ZbwLrr=w913-h913-s-no-gm
 Biriyani,Lamb Biriyani,Yes,,,2,,"Aromatic basmati rice with tender, spiced lamb, saffron, and herbs",£9.99,,,
 Biriyani,Prawn Biriyani,,,,2,yes,"Aromatic basmati rice with spiced prawns, saffron, and herbs.",£11.99,,,
 Biriyani,Veg Biriyani,Yes,,,2,,"Aromatic basmati rice with spiced vegetables, saffron, and herbs.",£5.99,,,
@@ -133,5 +133,6 @@ Soft Drinks,Irn bru (330ml),,,,,,"Fizzy Irn-Bru (330 ml), Scotland’s iconic bo
 Soft Drinks,Diet Irn bru (330ml),,,,,,"Zesty Diet Irn-Bru (330 ml), sugar-free with Scotland’s bold, tangy flavor, a refreshing drink companion.",1.5,,,
 Deals,Chettinad Chicken + Parota (2pc) + Kesari,,,,,yes,"Chettinad Chicken with 2 Parotas and Kesari dessert combo. Spicy, authentic South Indian flavors at a great deal!",£12.95,,,
 Deals,Madras lamb + Ghee rice + Kesari,,,,,yes,"Madras Lamb with Ghee Rice and Kesari dessert combo. Rich, aromatic South Indian dish with a sweet finish, perfect deal!
+
 
 ",£12.95,,,
