@@ -13,7 +13,7 @@ const ContactSection = () => {
             <div className="mb-8">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 header-decoration">Visit Us</h2>
               <p className="text-foreground/70 mb-6">
-                We'd love to welcome you to SpiceHaven. Experience our warm hospitality and exquisite flavors in a beautiful setting.
+                We'd love to welcome you to cholahighlands. Experience our warm hospitality and exquisite flavors in a beautiful setting.
               </p>
             </div>
 
@@ -27,7 +27,7 @@ const ContactSection = () => {
                     <h3 className="font-medium">Location</h3>
                   </div>
                   <p className="text-foreground/70">
-                  138-140 duke street EH6 8HR <br />
+                  138-140 Duke Street EH6 8HR <br />
                   EDINBURGH
 
                   </p>
@@ -43,8 +43,8 @@ const ContactSection = () => {
                     <h3 className="font-medium">Contact</h3>
                   </div>
                   <p className="text-foreground/70">
-                    (131) 555-3007<br />
-                    info@cholahighlands.com
+                    +44 131-555-3007<br />
+                    cholahighlands@gmail.com
                   </p>
                 </CardContent>
               </Card>
