@@ -1,9 +1,9 @@
 Category,Item Name,Gluten Free,Vegan,Allergens,Spicy Level,Popular,Description,Price,Price2,Subcategory,Image URL
-Vadai,Medhu Vadai  (2pc),,yes,,2,yes,Deep-fried lentil doughnuts ,£3.00,,,
-Vadai,Sambhar Vadai (2pc),,yes,,2,yes,Deep-fried lentil doughnuts (medu vadai) soaked in a flavorful and tangy lentil-based vegetable stew called sambhar.,£4.00,,,
-Vadai,Curd Vadai (2pc),,,,0,,Deep-fried lentil doughnuts (medu vadai) soaked in a Yogurt.,£4.00,,,
-Vadai,Masal Vadai (2pc),yes,yes,,2,,"crispy, deep-fried South Indian snack made from lentil and a blend of spices",£3.75,,,
-Snacks,Aloo Bonda,,Yes,,2,,"Golden-brown raw Potato fritters, deep-fried in a flavorful gram flour.",£3.00,,,
+Vadai,Medhu Vadai  (2pc),,yes,,2,yes,Deep-fried lentil doughnuts ,£4.25,,,
+Vadai,Sambhar Vadai (2pc),,yes,,2,yes,Deep-fried lentil doughnuts (medu vadai) soaked in a flavorful and tangy lentil-based vegetable stew called sambhar.,£5.25,,,
+Vadai,Curd Vadai (2pc),,,,0,,Deep-fried lentil doughnuts (medu vadai) soaked in a Yogurt.,£4.99,,,
+Vadai,Masal Vadai (2pc),yes,yes,,2,,"crispy, deep-fried South Indian snack made from lentil and a blend of spices",£4.25,,,
+Snacks,Aloo Bonda,,Yes,,2,,"Golden-brown raw Potato fritters, deep-fried in a flavorful gram flour.",£5.25,,,
 Snacks,Paniyaram (7 pc),Yes,Yes,,1,,Golden-brown dumplings made from fermented rice and Lentils,£3.25,,,
 Snacks,Punugulu (7 pc),,Yes,,1,yes,"Crispy, deep-fried South Indian snack made from idli or dosa batter",£3.25,,,
 Snacks,Vazhakai Baji,,Yes,,1,,"Golden-brown raw banana fritters, deep-fried in a flavorful gram flour.",£4.25,,,
@@ -133,5 +133,6 @@ Soft Drinks,Irn bru (330ml),,,,,,"Fizzy Irn-Bru (330 ml), Scotland’s iconic bo
 Soft Drinks,Diet Irn bru (330ml),,,,,,"Zesty Diet Irn-Bru (330 ml), sugar-free with Scotland’s bold, tangy flavor, a refreshing drink companion.",1.5,,,
 Deals,Chettinad Chicken + Parota (2pc) + Kesari,,,,,yes,"Chettinad Chicken with 2 Parotas and Kesari dessert combo. Spicy, authentic South Indian flavors at a great deal!",£12.95,,,
 Deals,Madras lamb + Ghee rice + Kesari,,,,,yes,"Madras Lamb with Ghee Rice and Kesari dessert combo. Rich, aromatic South Indian dish with a sweet finish, perfect deal!
+
 
 ",£12.95,,,
