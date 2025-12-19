@@ -61,11 +61,11 @@ const ContactSection = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <p className="font-medium">Monday - Saturday</p>
-                    <p className="text-foreground/70">5:00 PM - 11:00 PM</p>
+                    <p className="text-foreground/70">11:00 AM - 11:00 PM</p>
                   </div>
                   <div>
                     <p className="font-medium">Sunday</p>
-                    <p className="text-foreground/70">12:30 PM - 2:30 PM && 6:30 PM - 11:00 PM</p>
+                    <p className="text-foreground/70">11:00 AM - 11:00 PM</p>
                   </div>
                 </div>
               </CardContent>
